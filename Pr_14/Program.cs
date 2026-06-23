@@ -9,6 +9,10 @@ namespace Pr_14
         {
             using (ApplicationDbContext db = new ApplicationDbContext())
             {
+                db.Database.EnsureDeleted();
+
+                db.Database.EnsureCreated();
+
                 // создаем два объекта User
                 User tom = new User { Name = "Том", Age = 33 };
                 User alice = new User { Name = "Алиса", Age = 26 };
