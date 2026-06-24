@@ -12,7 +12,7 @@ namespace Pr_14.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=pr14.db");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=pr14_db;Username=postgres;Password=1111");
         }
     }
 }

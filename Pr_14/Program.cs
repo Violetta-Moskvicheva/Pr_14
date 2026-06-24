@@ -10,7 +10,6 @@ namespace Pr_14
             using (ApplicationDbContext db = new ApplicationDbContext())
             {
                 db.Database.EnsureDeleted();
-
                 db.Database.EnsureCreated();
 
                 // создаем два объекта User
@@ -31,12 +30,7 @@ namespace Pr_14
                     Console.WriteLine($"{u.Id}.{u.Name} - {u.Age}");
                 }
             }
-
-            Console.ReadKey(); // Чтобы консоль не закрылась сразу
-
-            //// see https://aka.ms/applicationconfiguration.
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new Form1());
+            Console.ReadKey();
         }
     }
 }
